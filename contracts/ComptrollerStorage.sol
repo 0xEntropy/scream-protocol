@@ -152,3 +152,8 @@ contract ComptrollerV5Storage is ComptrollerV4Storage {
     // @notice Supply caps enforced by mintAllowed for each cToken address. Defaults to zero which corresponds to unlimited supplying.
     mapping(address => uint) public supplyCaps;
 }
+
+contract ComptrollerV7Storage is ComptrollerV5Storage {
+    // @notice The governor can call certain permissioned functions.
+    address public governor;
+}
